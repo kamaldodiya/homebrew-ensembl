@@ -15,15 +15,15 @@ class Hal < Formula
   url 'https://github.com/ComparativeGenomicsToolkit/hal.git', :using => :git, :revision => 'd864ed8ba23f402e9a8a0f26d0daf0d7b5ca89de'
   version 'd864ed8'
 
-  depends_on 'ensembl/ensembl/sonlib'
-  depends_on 'ensembl/external/kent'
+  depends_on 'kamaldodiya/ensembl/sonlib'
+  depends_on 'kamaldodiya/external/kent'
   depends_on 'hdf5@1.8'
 
   def install
     ENV.deparallelize
     
-    sonlib = Formula['ensembl/ensembl/sonlib']
-    kent = Formula['ensembl/external/kent']
+    sonlib = Formula['kamaldodiya/ensembl/sonlib']
+    kent = Formula['kamaldodiya/external/kent']
     hdf5 = Formula['hdf5@1.8']
 
     # Add hdf5 onto PATH so we find the 1.8 compiler
